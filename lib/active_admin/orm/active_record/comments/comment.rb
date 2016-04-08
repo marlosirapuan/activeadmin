@@ -25,7 +25,7 @@ module ActiveAdmin
     end
 
     def self.find_for_resource_in_namespace(resource, namespace)
-      if ActiveAdmin.application.namespaces[namespace.to_sym].comments_order
+      if ActiveAdmin.application.namespaces[namespace.to_sym].comments_read_all_namespaces
         where(
           resource_type: resource_type(resource),
           resource_id:   resource_id_cast(resource),
