@@ -4,10 +4,11 @@ require 'active_admin/orm/active_record/comments/namespace_helper'
 require 'active_admin/orm/active_record/comments/resource_helper'
 
 # Add the comments configuration
-ActiveAdmin::Application.inheritable_setting :comments,                   true
-ActiveAdmin::Application.inheritable_setting :comments_registration_name, 'Comment'
-ActiveAdmin::Application.inheritable_setting :comments_order,             "created_at ASC"
-ActiveAdmin::Application.inheritable_setting :comments_menu,              {}
+ActiveAdmin::Application.inheritable_setting :comments,                     true
+ActiveAdmin::Application.inheritable_setting :comments_registration_name,   'Comment'
+ActiveAdmin::Application.inheritable_setting :comments_order,               "created_at ASC"
+ActiveAdmin::Application.inheritable_setting :comments_menu,                {}
+ActiveAdmin::Application.inheritable_setting :comments_read_all_namespaces, false
 
 # Insert helper modules
 ActiveAdmin::Namespace.send :include, ActiveAdmin::Comments::NamespaceHelper
