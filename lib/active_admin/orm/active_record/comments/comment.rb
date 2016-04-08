@@ -28,7 +28,7 @@ module ActiveAdmin
       where(
         resource_type: resource_type(resource),
         resource_id:   resource_id_cast(resource),
-        namespace:     namespace.to_s
+        #namespace:     namespace.to_s
       ).order(ActiveAdmin.application.namespaces[namespace.to_sym].comments_order)
     end
 
